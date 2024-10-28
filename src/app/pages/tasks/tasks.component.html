@@ -1,0 +1,13 @@
+<div>
+  <dx-text-box (input)="onFilterChange($event)" placeholder="Enter text to filter..." rows="3"></dx-text-box>
+</div>
+<dx-data-grid
+  [dataSource]="dataSource"
+  [showBorders]="true"
+  [editing]="{ mode: 'row', allowUpdating: true, allowAdding: true, allowDeleting: true }"
+>
+  <dxi-column dataField="id" caption="ID"></dxi-column>
+  <dxi-column dataField="name" caption="Name"></dxi-column>
+  <dxi-column dataField="age" caption="Age"></dxi-column>
+  <dxi-column dataField="city" caption="City"></dxi-column>
+</dx-data-grid>
